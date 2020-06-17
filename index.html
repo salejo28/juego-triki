@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triki with Typescript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="modal" id="modal">
+        <div class="card" id="card">
+            <div class="card-header">
+                <h1>Triki</h1>
+            </div>
+            <div class="card-body">
+                <h1>Welcome to the game Triki</h1>
+                <p>This is a game very funny <br>
+                    <b>you want to start?</b>
+                </p>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-start" id="start">Start</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-start" id="modal-start">
+        <div class="card-form" id="card-form">
+            <div class="card-header-form">
+                Players
+            </div>
+            <div class="card-form-body">
+                <div class="body-input">
+                    <input type="text" class="input" id="player1" required>
+                    <span class="bar"></span>
+                    <label class="labelPlayer">Player 1</label>
+                </div>
+                <div class="body-input">
+                    <input type="text" class="input" id="player2" required>
+                    <span class="bar"></span>
+                    <label class="labelPlayer">Player 2</label>
+                </div>
+                <button class="btn btn-to-play" id="play">To Play</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert" id="alert">
+        <span class="closeBtn" id="closeBtn">&times;</span>
+        <b>Please fill all the fields</b>
+    </div>
+
+    <div class="content-game">
+        
+        <div class="message" id="message">
+            <label id="fillTheUsername"></label>
+        </div>
+
+        <div class="table" id="table">
+            <input type="button" class="btn btn-triki" id="p1"></input>
+            <input type="button" class="btn btn-triki" id="p2"></input>
+            <input type="button" class="btn btn-triki" id="p3"></input>
+             <br>
+            <input type="button" class="btn btn-triki" id="p4"></input>
+            <input type="button" class="btn btn-triki" id="p5"></input>
+            <input type="button" class="btn btn-triki" id="p6"></input>
+             <br>
+            <input type="button" class="btn btn-triki" id="p7"></input>
+            <input type="button"class="btn btn-triki" id="p8"></input>
+            <input type="button" class="btn btn-triki" id="p9"></input>
+        </div>
+    </div>
+
+    <div class="modal-win" id="modal-win">
+        <div class="alert-win" id="alert-win">
+            <h1 id="h1"></h1>
+            <button class="btn btn-restart" id="restart">Restart</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
