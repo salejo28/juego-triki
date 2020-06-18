@@ -158,22 +158,45 @@ function check() {
         || (tab[2].value == "X" && tab[4].value == "X" && tab[6].value == "X")) {
         modalWin.classList.add('show');
         alertWin.classList.add('show');
-        messageWin.innerHTML = `Congrautulations ${inpPlayer1.value}, you won`;
+        messageWin.innerHTML = "Congrautulations " + inpPlayer1.value + ", you won";
         game = false;
     }
-
-    if ((tab[0].value == "O" && tab[1].value == "O" && tab[2].value == "O")
-        || (tab[3].value == "O" && tab[4].value == "O" && tab[5].value == "O")
-        || (tab[6].value == "O" && tab[7].value == "O" && tab[8].value == "O")
-        || (tab[0].value == "O" && tab[3].value == "O" && tab[6].value == "O")
-        || (tab[1].value == "O" && tab[4].value == "O" && tab[7].value == "O")
-        || (tab[2].value == "O" && tab[5].value == "O" && tab[8].value == "O")
-        || (tab[0].value == "O" && tab[4].value == "O" && tab[8].value == "O")
-        || (tab[2].value == "O" && tab[4].value == "O" && tab[6].value == "O")) {
-        modalWin.classList.add('show');
-        alertWin.classList.add('show');
-        messageWin.innerHTML = `Congrautulations ${inpPlayer2.value}, you won`;
-        game = false;
+    else {
+        if ((tab[0].value == "O" && tab[1].value == "O" && tab[2].value == "O")
+            || (tab[3].value == "O" && tab[4].value == "O" && tab[5].value == "O")
+            || (tab[6].value == "O" && tab[7].value == "O" && tab[8].value == "O")
+            || (tab[0].value == "O" && tab[3].value == "O" && tab[6].value == "O")
+            || (tab[1].value == "O" && tab[4].value == "O" && tab[7].value == "O")
+            || (tab[2].value == "O" && tab[5].value == "O" && tab[8].value == "O")
+            || (tab[0].value == "O" && tab[4].value == "O" && tab[8].value == "O")
+            || (tab[2].value == "O" && tab[4].value == "O" && tab[6].value == "O")) {
+            modalWin.classList.add('show');
+            alertWin.classList.add('show');
+            messageWin.innerHTML = "Congrautulations " + inpPlayer2.value + ", you won";
+            game = false;
+        }
+    }
+    if ((tab[0].value != "I" && tab[1].value != "I" && tab[2].value != "I")
+        && (tab[3].value != "I" && tab[4].value != "I" && tab[5].value != "I")
+        && (tab[6].value != "I" && tab[7].value != "I" && tab[8].value != "I")
+        && (tab[0].value != "I" && tab[3].value != "I" && tab[6].value != "I")
+        && (tab[1].value != "I" && tab[4].value != "I" && tab[7].value != "I")
+        && (tab[2].value != "I" && tab[5].value != "I" && tab[8].value != "I")
+        && (tab[0].value != "I" && tab[4].value != "I" && tab[8].value != "I")
+        && (tab[2].value != "I" && tab[4].value != "I" && tab[6].value != "I")) {
+        if (!((tab[0].value == tab[1].value == tab[2].value)
+            || (tab[3].value == tab[4].value == tab[5].value)
+            || (tab[6].value == tab[7].value == tab[8].value)
+            || (tab[0].value == tab[3].value == tab[6].value)
+            || (tab[1].value == tab[4].value == tab[7].value)
+            || (tab[2].value == tab[5].value == tab[8].value)
+            || (tab[0].value == tab[4].value == tab[8].value)
+            || (tab[2].value == tab[4].value == tab[6].value))) {
+            modalWin.classList.add('show');
+            alertWin.classList.add('show');
+            messageWin.innerHTML = inpPlayer1.value + " and " + inpPlayer2.value + ", this was a tie";
+            game = false;
+        }
     }
 }
 
